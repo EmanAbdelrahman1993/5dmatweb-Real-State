@@ -11,6 +11,9 @@
 |
 */
 
+Route::get('/adminPanel','AdminController@index');
+
+
 Route::get('/', function () {
     return view('welcome');
 });
