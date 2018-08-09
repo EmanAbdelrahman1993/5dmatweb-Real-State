@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AddUserRequestAdmin;
+use App\User;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -32,10 +34,17 @@ class UsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AddUserRequestAdmin $request , User $user)
     {
-        //
+        $user->create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+
+        ]);
+        return redirect('/users')->withFlashMessage('تمت إضافة العضو بنجاح');
     }
+
 
     /**
      * Display the specified resource.

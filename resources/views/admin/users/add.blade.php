@@ -26,13 +26,16 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Hover Data Table</h3>
+                        <h3 class="box-title">إضافة عضو جديد</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
+                        <form method="POST" action="{{ url('users/store') }}" aria-label="{{ __('تسجيل عضوية جديدة') }}">
 
+                            @csrf
+                            @include('admin.users.form')
 
-                        test
+                        </form>
                     </div>
                 </div>
             </div>
