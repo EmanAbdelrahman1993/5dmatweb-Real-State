@@ -6,38 +6,39 @@
 
 @section('content')
 <div class="container">
-    <div class="contact_bottom">
+    <div>
         <h3>تسجيل الدخول</h3>
-                    <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
+                    <form method="POST" action="{{ route('login') }}" aria-label="{{ __('تسجيل الدخول') }}">
                         @csrf
 
-                        <div class="form-group row">
-                            <label for="email" class="col-sm-6 col-form-label text-md-right">الايميل</label>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                       <div class="row" >
 
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-6 col-form-label text-md-right">رقم المرور</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                    <label for="password">رقم المرور</label>
+                                    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                    @if ($errors->has('password'))
+                                        <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
-                                @endif
+                                    @endif
+                                </div>
                             </div>
-                        </div>
+                       </div>
+                           <div class="col-lg-12">
+                               <div class="form-group">
+                                   <label for="email">الايميل</label>
+                                   <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+
+                                   @if ($errors->has('email'))
+                                       <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                   @endif
+                               </div>
+                           </div>
+
 
                         <div class="form-group row">
                             <div class="col-md-12">
