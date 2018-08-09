@@ -8,9 +8,9 @@
 <div class="container">
 
 
-    <div class="contact_bottom">
+
         <h3>تسجيل عضوية جديدة</h3>
-        </br>
+
         <form method="POST" action="{{ route('register') }}" aria-label="{{ __('تسجيل عضوية جديدة') }}">
             @csrf
 
@@ -55,25 +55,21 @@
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="تأكيد رقم المرور" required>
                 </div>
             </div>
-            </br>
 
-            <div class="text2">
-                <div class="col-md-12 ">
+
+            <div class="form-group row mb-0">
+                <div class="col-md-12">
                     <button type="submit" class="btn btn-warning">
                         <i class="fa fa-btn fa-sign-in" style="color: #ffffff"></i>
-                        {{ __('تسجيل') }}
+                        تسجيل الدخول
                     </button>
+
                 </div>
             </div>
 
         </form>
 
     </div>
-
-
-
-
-</div>
 
 
 

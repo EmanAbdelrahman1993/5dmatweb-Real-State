@@ -6,47 +6,26 @@
 
 @section('content')
 <div class="container">
-    <div>
+
         <h3>تسجيل الدخول</h3>
-<<<<<<< HEAD
-                    <form method="POST" action="{{ route('login') }}" aria-label="{{ __('تسجيل الدخول') }}">
-                        @csrf
 
 
-                       <div class="row" >
-=======
-        </br>
+
                     <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
                         @csrf
 
                         <div class="text2">
-                            <div class="col-md-12">
 
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="إدخل إيميلك"   required autofocus>
->>>>>>> 266e6cc3389c8cdfaa127a73161e3e571c9a1c03
-
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                    <label for="password">رقم المرور</label>
-                                    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-                                    @if ($errors->has('password'))
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
-<<<<<<< HEAD
-                       </div>
                            <div class="col-lg-12">
-                               <div class="form-group">
-                                   <label for="email">الايميل</label>
-                                   <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                   <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}"  placeholder="الإيميل" required autofocus>
 
                                    @if ($errors->has('email'))
                                        <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('email') }}</strong>
-=======
+                                       </span>
+                                    @endif
+
+                               </div>
                         </div>
 
 
@@ -57,7 +36,7 @@
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('password') }}</strong>
->>>>>>> 266e6cc3389c8cdfaa127a73161e3e571c9a1c03
+
                                     </span>
                                    @endif
                                </div>
@@ -88,10 +67,8 @@
                                 </a>
                             </div>
                         </div>
+
                     </form>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 @endsection

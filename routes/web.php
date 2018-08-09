@@ -11,8 +11,6 @@
 |
 */
 
-Route::get('/adminPanel','AdminController@index');
-
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,3 +19,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['middleware'=>['web','IsAdmin']] , function(){
+
+    Route::get('/adminPanel','AdminController@index');
+
+    Route::resource('users','UsersController');
+
+
+
+
+});

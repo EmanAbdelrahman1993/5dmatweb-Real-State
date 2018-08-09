@@ -26,7 +26,6 @@ body {
 /* Layout */
 .wrapper {
   height: 100%;
-  position: relative;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -57,7 +56,7 @@ body {
   -moz-transition: -moz-transform 0.3s ease-in-out, margin 0.3s ease-in-out;
   -o-transition: -o-transform 0.3s ease-in-out, margin 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out;
-  margin-left: 230px;
+  margin-right: 230px;
   z-index: 820;
 }
 .layout-top-nav .content-wrapper,
@@ -100,7 +99,7 @@ body {
 .fixed .main-header,
 .fixed .main-sidebar,
 .fixed .left-side {
-  position: fixed;
+
 }
 .fixed .main-header {
   top: 0;
@@ -195,7 +194,7 @@ a:focus {
   -o-transition: margin-left 0.3s ease-in-out;
   transition: margin-left 0.3s ease-in-out;
   margin-bottom: 0;
-  margin-left: 230px;
+  margin-right: 230px;
   border: none;
   min-height: 50px;
   border-radius: 0;
@@ -224,7 +223,7 @@ a:focus {
 }
 .main-header .navbar-custom-menu,
 .main-header .navbar-right {
-  float: right;
+  float: left;
 }
 @media (max-width: 991px) {
   .main-header .navbar-custom-menu a,
@@ -246,7 +245,7 @@ a:focus {
   }
 }
 .main-header .sidebar-toggle {
-  float: left;
+  float: right;
   background-color: transparent;
   background-image: none;
   padding: 15px 15px;
@@ -284,7 +283,7 @@ a:focus {
   -o-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
   display: block;
-  float: left;
+  float: right;
   height: 50px;
   font-size: 20px;
   line-height: 50px;
@@ -327,7 +326,7 @@ a:focus {
   padding: 7px 5px;
   position: absolute;
   top: 15px;
-  right: 10px;
+  left: 10px;
   border-radius: 2px;
 }
 .content-header > .breadcrumb > li > a {
@@ -411,7 +410,7 @@ a:focus {
 .main-sidebar {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   padding-top: 50px;
   min-height: 100%;
   width: 230px;
@@ -609,7 +608,7 @@ a:focus {
     display: none;
   }
   .sidebar-mini.sidebar-collapse .main-header .navbar {
-    margin-left: 50px;
+    margin-right: 50px;
   }
 }
 .sidebar-mini:not(.sidebar-mini-expand-feature).sidebar-collapse .sidebar-menu > li:hover > a > span:not(.pull-right),

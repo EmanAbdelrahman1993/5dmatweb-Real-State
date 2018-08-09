@@ -1,7 +1,7 @@
 @extends('admin.layouts.layout')
 
 @section('title')
-الرئيسية
+    قائمة العضو
 @endsection
 
 @section('content')

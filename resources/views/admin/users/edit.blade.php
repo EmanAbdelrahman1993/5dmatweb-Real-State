@@ -1,9 +1,9 @@
 @extends('admin.layouts.layout')
 
 @section('title')
-الرئيسية
+    تعديل بيانات العضو
 @endsection
 
 @section('content')
-    <h2 >الرئيسية</h2>
+    <h2 ></h2>
 @endsection
