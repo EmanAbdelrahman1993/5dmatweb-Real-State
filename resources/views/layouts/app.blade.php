@@ -73,6 +73,9 @@
 
 @yield('content')
 
+<div class="clearfix"></div>
+
+
 <!---footer--->
 
     <div class="footer">

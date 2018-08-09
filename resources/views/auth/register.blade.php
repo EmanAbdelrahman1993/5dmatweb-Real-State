@@ -10,14 +10,13 @@
 
     <div class="contact_bottom">
         <h3>تسجيل عضوية جديدة</h3>
+        </br>
         <form method="POST" action="{{ route('register') }}" aria-label="{{ __('تسجيل عضوية جديدة') }}">
             @csrf
 
-            <div class="form-group row">
-                <label for="name" class="col-md-6 col-form-label text-md-right">{{ __('الأسم') }}</label>
-
-                <div class="col-md-6">
-                    <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+            <div class="text">
+                <div class="col-md-12">
+                    <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" placeholder="الأسم" required autofocus>
 
                     @if ($errors->has('name'))
                         <span class="invalid-feedback" role="alert">
@@ -27,11 +26,9 @@
                 </div>
             </div>
 
-            <div class="form-group row">
-                <label for="email" class="col-md-6 col-form-label text-md-right">{{ __('الايميل') }}</label>
-
-                <div class="col-md-6">
-                    <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+            <div class="text2">
+                <div class="col-md-12">
+                    <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="الايميل" required>
 
                     @if ($errors->has('email'))
                         <span class="invalid-feedback" role="alert">
@@ -41,11 +38,9 @@
                 </div>
             </div>
 
-            <div class="form-group row">
-                <label for="password" class="col-md-6 col-form-label text-md-right">{{ __('رقم المرور') }}</label>
-
-                <div class="col-md-6">
-                    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+            <div class="text2">
+                <div class="col-md-12">
+                    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="رقم المرور" required>
 
                     @if ($errors->has('password'))
                         <span class="invalid-feedback" role="alert">
@@ -55,22 +50,22 @@
                 </div>
             </div>
 
-            <div class="form-group row">
-                <label for="password-confirm" class="col-md-6 col-form-label text-md-right">{{ __('تأكيد رقم المرور') }}</label>
-
-                <div class="col-md-6">
-                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+            <div class="text2">
+                <div class="col-md-12">
+                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="تأكيد رقم المرور" required>
                 </div>
             </div>
+            </br>
 
-            <div class="form-group row mb-0">
+            <div class="text2">
                 <div class="col-md-12 ">
                     <button type="submit" class="btn btn-warning">
-                        <i class="fa fa-btn fa-sign-in"></i>
+                        <i class="fa fa-btn fa-sign-in" style="color: #ffffff"></i>
                         {{ __('تسجيل') }}
                     </button>
                 </div>
             </div>
+
         </form>
 
     </div>
@@ -79,6 +74,7 @@
 
 
 </div>
+
 
 
 @endsection

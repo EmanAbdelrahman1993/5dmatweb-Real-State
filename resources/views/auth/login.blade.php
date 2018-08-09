@@ -8,11 +8,22 @@
 <div class="container">
     <div>
         <h3>تسجيل الدخول</h3>
+<<<<<<< HEAD
                     <form method="POST" action="{{ route('login') }}" aria-label="{{ __('تسجيل الدخول') }}">
                         @csrf
 
 
                        <div class="row" >
+=======
+        </br>
+                    <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
+                        @csrf
+
+                        <div class="text2">
+                            <div class="col-md-12">
+
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="إدخل إيميلك"   required autofocus>
+>>>>>>> 266e6cc3389c8cdfaa127a73161e3e571c9a1c03
 
                                 <div class="col-lg-12">
                                     <div class="form-group">
@@ -25,6 +36,7 @@
                                     @endif
                                 </div>
                             </div>
+<<<<<<< HEAD
                        </div>
                            <div class="col-lg-12">
                                <div class="form-group">
@@ -34,18 +46,30 @@
                                    @if ($errors->has('email'))
                                        <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('email') }}</strong>
+=======
+                        </div>
+
+
+                        <div class="text2">
+                            <div class="col-md-12">
+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="كلمة المرور" required>
+
+                                @if ($errors->has('password'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+>>>>>>> 266e6cc3389c8cdfaa127a73161e3e571c9a1c03
                                     </span>
                                    @endif
                                </div>
                            </div>
 
 
-                        <div class="form-group row">
+                        <div class="text2">
                             <div class="col-md-12">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                <div class="checkbox">
+                                    <label>
+                                          <input type="checkbox" name="remember" id="remember" style="float: right; margin-left: 10px;" {{ old('remember') ? 'checked' : '' }}>
 
-                                    <label class="form-check-label" for="remember">
                                         تذكرنى
                                     </label>
                                 </div>
@@ -55,7 +79,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-12">
                                 <button type="submit" class="btn btn-warning">
-                                    <i class="fa fa-btn fa-sign-in"></i>
+                                    <i class="fa fa-btn fa-sign-in" style="color: #ffffff"></i>
                                     تسجيل الدخول
                                 </button>
 
