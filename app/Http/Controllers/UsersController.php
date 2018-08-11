@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\AddUserRequestAdmin;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 class UsersController extends Controller
 {
@@ -15,7 +17,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return view('admin.users.index');
+        $user = User::all();
+        return view('admin.users.index')->with('user',$user);
     }
 
     /**
@@ -65,7 +68,8 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return view('admin.users.edit')->with('user',$user);
     }
 
     /**
@@ -75,9 +79,11 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request , $id)
     {
-        //
+        $user = User::find($id);
+		$user->fill($request->all())->save();
+		return redirect('/users')->withFlashMessage('تم التعديل بنجاح');
     }
 
     /**

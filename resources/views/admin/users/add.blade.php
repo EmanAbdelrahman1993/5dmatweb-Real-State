@@ -30,10 +30,10 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <form method="POST" action="{{ url('users/store') }}" aria-label="{{ __('تسجيل عضوية جديدة') }}">
+                        <form method="POST" action="{{url('users')}}">
 
-                            @csrf
-                            @include('admin.users.form')
+                             @include('admin.users.form')
+
 
                         </form>
                     </div>
